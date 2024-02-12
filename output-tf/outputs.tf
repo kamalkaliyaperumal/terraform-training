@@ -12,3 +12,8 @@ output "image_id" {
   value       = docker_image.nginx.image_id
   sensitive   = true
 }
+
+output "port_info" {
+  description = "Internal External Port details"
+  value = docker_container.nginx.ports
+}
